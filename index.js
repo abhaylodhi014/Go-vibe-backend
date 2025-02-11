@@ -13,7 +13,8 @@ const app = express();
 
 // Middleware
 app.use(express.json()); // Enable JSON parsing
-app.use(cors()); // Enable CORS
+app.use(cors({ origin: 'https://go-vibe-frontend.vercel.app' }));
+// Enable CORS
 //cors -> hume port 5000 per run karna hai per browers mai port 3000 per run hua isliye browers security isse ki wajah se hame ye error deta hai or cors inko handle karta
 app.use(bodyParser.json({extended : true}))
 app.use(bodyParser.urlencoded({extended : true}))
